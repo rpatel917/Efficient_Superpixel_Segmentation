@@ -6,8 +6,4 @@ permalink: /midterm/
 
 # Midterm Report
 
----
-
-*This section will be completed for the midterm submission.*
-
----
+Content to be added...
