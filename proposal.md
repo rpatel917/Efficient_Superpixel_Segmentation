@@ -1,29 +1,20 @@
 ---
-layout: default
+layout: page
 title: Proposal
-nav_order: 2
-description: "Project proposal for CS-7641 Machine Learning"
 permalink: /proposal/
 ---
 
 # Project Proposal
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ---
 
 ## Introduction
 
-Machine learning has revolutionized how we approach complex prediction and classification tasks across various domains. This project focuses on [describe your specific problem domain, e.g., "predicting customer churn in subscription-based services" or "classifying medical images for disease detection"].
+Machine learning has revolutionized numerous fields by enabling systems to learn patterns from data without explicit programming. In this project, we explore [specific domain/problem area], which presents unique challenges that make it an ideal candidate for machine learning approaches. The rapid growth of data in this domain, combined with the complexity of underlying patterns, necessitates automated and intelligent analysis methods.
 
-The motivation for this project stems from [explain the real-world significance and why this problem matters]. Current approaches face challenges such as [mention 2-3 key challenges in the domain], which this project aims to address through advanced machine learning techniques.
+Our project aims to develop and compare multiple machine learning models to address [specific problem]. This work is motivated by the practical significance of [application area] and the opportunity to apply advanced ML techniques including supervised learning, unsupervised learning, and potentially deep learning approaches. By leveraging modern computational methods, we seek to achieve both theoretical insights and practical solutions that can be deployed in real-world scenarios.
 
-Our goal is to develop and compare multiple machine learning models to [state your primary objective], ultimately identifying the most effective approach for [specific application]. This work has potential applications in [list 2-3 practical applications].
+The increasing availability of large-scale datasets and computational resources has made it possible to tackle problems that were previously intractable. Our research contributes to this growing body of work by [specific contribution].
 
 ---
 
@@ -31,162 +22,211 @@ Our goal is to develop and compare multiple machine learning models to [state yo
 
 ### Problem Statement
 
-The central problem we aim to solve is: 
+The core problem we address is **[clearly define your specific problem]**. This problem is significant because [explain importance and real-world impact]. Current approaches face limitations such as [describe existing gaps or challenges].
 
-{: .important }
-> **[Clearly state your problem in one sentence, e.g., "Given historical customer interaction data, can we accurately predict which customers are likely to churn within the next 30 days?"]**
-
-### Formal Definition
-
-- **Input**: [Describe your input data, e.g., "A dataset containing N samples with M features including customer demographics, usage patterns, and engagement metrics"]
-- **Output**: [Describe expected output, e.g., "Binary classification (churn/no-churn) with associated probability scores"]
-- **Task Type**: [e.g., Supervised Learning - Classification/Regression, Unsupervised Learning - Clustering, etc.]
+Specifically, we aim to [prediction/classification/clustering task] using [type of data]. This is a [supervised/unsupervised/semi-supervised] learning problem that falls under the category of [regression/classification/clustering/etc.].
 
 ### Dataset
 
-We will utilize the **[Dataset Name]** dataset, which contains:
+We will utilize the **[Dataset Name]** dataset, which contains comprehensive information about [domain].
 
-| Property | Description |
-|:---------|:------------|
-| **Size** | [e.g., "10,000 samples with 50 features"] |
-| **Source** | [e.g., "Kaggle/UCI ML Repository/Custom collected"] |
-| **Features** | [Brief description of key features] |
-| **Target Variable** | [Description of what you're predicting] |
-| **Data Split** | Training (70%), Validation (15%), Test (15%) |
+**Dataset Characteristics:**
+- **Size:** [Number] instances with [Number] features
+- **Format:** [CSV/JSON/Image/etc.]
+- **Source:** [UCI ML Repository/Kaggle/Custom/etc.]
+- **Target Variable:** [What you're predicting/classifying]
+- **Class Distribution:** [Balanced/Imbalanced - provide specifics]
+
+**Key Features:**
+- **Numerical Features:** [List examples]
+- **Categorical Features:** [List examples]
+- **Temporal Features:** [If applicable]
+- **Text/Image Features:** [If applicable]
+
+**Data Availability:** The dataset is publicly available at [URL/source].
 
 ### Challenges
 
-{: .warning }
-**Key Challenges to Address:**
-1. **[Challenge 1]**: [Describe challenge, e.g., "Class imbalance with only 15% positive samples"]
-2. **[Challenge 2]**: [e.g., "High dimensionality requiring feature selection"]
-3. **[Challenge 3]**: [e.g., "Missing values in approximately 10% of records"]
+This problem presents several significant challenges:
 
-### Success Metrics
+1. **Data Quality Issues**
+   - Missing values in approximately [X]% of instances
+   - Potential outliers and noise in [specific features]
+   - Class imbalance with [describe distribution]
 
-We will evaluate model performance using:
+2. **Feature Engineering**
+   - High-dimensional feature space requiring dimensionality reduction
+   - Need to identify and extract meaningful features from raw data
+   - Handling categorical variables with high cardinality
 
-- **Primary Metric**: [e.g., "F1-Score (to balance precision and recall)"]
-- **Secondary Metrics**: [e.g., "AUC-ROC, Accuracy, Precision, Recall"]
-- **Baseline**: [e.g., "Random classifier accuracy of 50%"]
-- **Target Performance**: [e.g., "F1-Score > 0.80"]
+3. **Model Selection and Complexity**
+   - Trade-off between model interpretability and performance
+   - Potential for overfitting with complex models
+   - Computational constraints for large-scale algorithms
+
+4. **Evaluation Challenges**
+   - Defining appropriate metrics that reflect real-world performance
+   - Ensuring model generalization to unseen data
+   - Handling imbalanced classes in evaluation
 
 ---
 
 ## Proposed Methods
 
-### Data Preprocessing
+### Data Preprocessing Pipeline
+
+Our preprocessing approach will include the following stages:
 
 #### 1. Data Cleaning
-- Handle missing values using [mean/median imputation, forward fill, or deletion]
-- Remove outliers using [IQR method, Z-score, or domain knowledge]
-- Address inconsistencies in [specific features]
+- **Missing Value Imputation:** 
+  - Mean/median imputation for numerical features
+  - Mode imputation or separate category for categorical features
+  - KNN imputation for features with complex relationships
+- **Outlier Detection:** 
+  - IQR method for identifying outliers
+  - Domain knowledge for validating and handling extreme values
+- **Duplicate Removal:** Identifying and removing duplicate records
 
 #### 2. Feature Engineering
-- Create interaction features between [relevant feature pairs]
-- Extract temporal features from timestamp data
-- Encode categorical variables using [one-hot encoding, label encoding, or target encoding]
-- Normalize/standardize numerical features using [StandardScaler or MinMaxScaler]
+- **Scaling and Normalization:** 
+  - StandardScaler for features requiring zero mean and unit variance
+  - MinMaxScaler for algorithms sensitive to feature ranges (e.g., neural networks)
+- **Encoding Categorical Variables:**
+  - One-hot encoding for nominal features
+  - Label encoding for ordinal features
+  - Target encoding for high-cardinality features
+- **Feature Creation:**
+  - Domain-specific transformations
+  - Polynomial features for capturing non-linear relationships
+  - Interaction terms between relevant features
 
-#### 3. Feature Selection
-- Apply correlation analysis to identify redundant features
-- Use [Recursive Feature Elimination, Tree-based feature importance, or PCA] for dimensionality reduction
-- Retain top K features based on importance scores
+#### 3. Dimensionality Reduction
+- Principal Component Analysis (PCA) to reduce feature space while retaining [X]% variance
+- Feature selection using correlation analysis and mutual information
+- Recursive Feature Elimination (RFE) with cross-validation
+
+#### 4. Data Splitting
+- **Training Set:** 70% for model training
+- **Validation Set:** 15% for hyperparameter tuning
+- **Test Set:** 15% for final evaluation
+- Stratified sampling to maintain class distribution across splits
 
 ### Machine Learning Algorithms
 
 We will implement and compare the following algorithms:
 
-#### 1. Logistic Regression (Baseline)
-{: .d-inline-block }
+#### Supervised Learning Approaches
 
-Baseline
-{: .label .label-blue }
+**1. Baseline Models**
+- **Logistic Regression / Linear Regression:** Simple linear models as baseline
+- **Decision Trees:** For interpretability and feature importance analysis
+- Rationale: Establish baseline performance and understand linear relationships
 
-- Simple linear model for binary classification
-- Provides interpretable coefficients
-- Fast training and prediction
-- Will serve as our baseline model
+**2. Ensemble Methods**
+- **Random Forest:** 
+  - Reduces overfitting through bagging
+  - Provides feature importance metrics
+  - Configuration: [N] trees with max depth [D]
+- **Gradient Boosting (XGBoost/LightGBM):**
+  - Sequential error correction for improved accuracy
+  - Handles imbalanced data effectively
+  - Configuration: Learning rate [α], number of estimators [N]
 
-#### 2. Random Forest
-{: .d-inline-block }
+**3. Support Vector Machines (SVM)**
+- Linear kernel for linearly separable data
+- RBF kernel for non-linear decision boundaries
+- Polynomial kernel for feature interactions
+- Hyperparameters: C (regularization), gamma (kernel coefficient)
 
-Ensemble
-{: .label .label-green }
+**4. Neural Networks**
+- **Multi-Layer Perceptron (MLP):**
+  - Architecture: [Input layer] → [Hidden layers with sizes] → [Output layer]
+  - Activation functions: ReLU for hidden layers, [softmax/sigmoid/linear] for output
+  - Regularization: Dropout ([X]%), L2 regularization
+  - Optimization: Adam optimizer with learning rate [α]
 
-- Ensemble of decision trees using bagging
-- Handles non-linear relationships well
-- Robust to outliers and overfitting
-- Provides feature importance scores
-- **Hyperparameters**: n_estimators, max_depth, min_samples_split
+#### Unsupervised Learning (for Exploratory Analysis)
 
-#### 3. Gradient Boosting (XGBoost/LightGBM)
-{: .d-inline-block }
+**1. Clustering**
+- **K-Means:** For identifying natural groupings in data
+- **DBSCAN:** For density-based clustering and outlier detection
+- **Hierarchical Clustering:** For understanding data structure
 
-Ensemble
-{: .label .label-green }
+**2. Dimensionality Reduction for Visualization**
+- **PCA:** Linear dimensionality reduction
+- **t-SNE:** Non-linear reduction for visualization
+- **UMAP:** For preserving both local and global structure
 
-- Sequential ensemble method
-- Often achieves state-of-the-art performance
-- Handles mixed data types effectively
-- **Hyperparameters**: learning_rate, n_estimators, max_depth, subsample
+### Model Optimization
 
-#### 4. Support Vector Machine (SVM)
-{: .d-inline-block }
-
-Kernel-based
-{: .label .label-purple }
-
-- Effective in high-dimensional spaces
-- Uses kernel trick for non-linear decision boundaries
-- Kernel options: RBF, polynomial, linear
-- **Hyperparameters**: C, gamma, kernel
-
-#### 5. Neural Network (Multi-Layer Perceptron)
-{: .d-inline-block }
-
-Deep Learning
-{: .label .label-yellow }
-
-- Captures complex non-linear patterns
-- Flexible architecture design
-- **Architecture**: Input layer → 2-3 hidden layers (64-128 neurons) → Output layer
-- **Activation**: ReLU for hidden layers, Sigmoid for output
-- **Optimization**: Adam optimizer with learning rate scheduling
-
-### Model Training and Validation
+#### Hyperparameter Tuning
+- **Grid Search:** Exhaustive search over defined parameter grid
+- **Random Search:** Efficient sampling of parameter space
+- **Bayesian Optimization:** For computationally expensive models
+- Cross-validation at each iteration to prevent overfitting
 
 #### Cross-Validation Strategy
-- Use 5-fold stratified cross-validation
-- Ensures balanced class distribution in each fold
-- Compute mean and standard deviation of metrics across folds
+- **K-Fold Cross-Validation:** 5-fold or 10-fold CV
+- **Stratified K-Fold:** For maintaining class distribution
+- **Time Series Split:** If temporal dependencies exist
 
-#### Hyperparameter Optimization
-- Employ GridSearchCV or RandomizedSearchCV
-- Define parameter grids for each algorithm
-- Use validation set performance for selection
+#### Regularization Techniques
+- **L1 Regularization (Lasso):** For feature selection
+- **L2 Regularization (Ridge):** For preventing large weights
+- **Elastic Net:** Combination of L1 and L2
+- **Early Stopping:** For neural networks to prevent overfitting
 
-#### Handling Class Imbalance (if applicable)
-- Apply SMOTE (Synthetic Minority Over-sampling Technique)
-- Adjust class weights in model training
-- Consider ensemble methods like EasyEnsemble
+### Evaluation Metrics
 
-#### Model Interpretability
-- Analyze feature importance for tree-based models
-- Generate SHAP (SHapley Additive exPlanations) values
-- Create partial dependence plots for key features
+We will evaluate model performance using multiple metrics:
 
-### Implementation Tools
+#### Primary Metrics
+- **For Classification:**
+  - Accuracy: Overall correctness
+  - F1-Score: Harmonic mean of precision and recall
+  - ROC-AUC: Area under receiver operating characteristic curve
+  - Precision and Recall: For imbalanced datasets
+- **For Regression:**
+  - RMSE (Root Mean Square Error): Penalizes large errors
+  - MAE (Mean Absolute Error): Average magnitude of errors
+  - R² Score: Proportion of variance explained
 
-{: .note }
-**Technology Stack:**
-- **Programming Language**: Python 3.8+
-- **Data Processing**: pandas, numpy
-- **Visualization**: matplotlib, seaborn, plotly
-- **Machine Learning**: scikit-learn, xgboost, lightgbm
-- **Deep Learning**: TensorFlow/Keras or PyTorch
-- **Model Interpretation**: SHAP, lime
-- **Environment**: Jupyter Notebooks for experimentation
+#### Secondary Metrics
+- **Confusion Matrix:** Detailed breakdown of predictions
+- **Classification Report:** Per-class metrics
+- **Learning Curves:** Training vs validation performance
+- **Feature Importance:** Understanding model decisions
+
+#### Computational Metrics
+- **Training Time:** Model training efficiency
+- **Inference Time:** Prediction speed
+- **Model Size:** Memory footprint
+- **Scalability:** Performance on larger datasets
+
+### Implementation Tools and Environment
+
+**Programming and Libraries:**
+- **Language:** Python 3.8+
+- **Core Libraries:** 
+  - scikit-learn (model implementation and evaluation)
+  - pandas (data manipulation)
+  - numpy (numerical computations)
+- **Visualization:** 
+  - matplotlib, seaborn (static plots)
+  - plotly (interactive visualizations)
+- **Deep Learning:** 
+  - TensorFlow 2.x or PyTorch (if using neural networks)
+  - Keras API for rapid prototyping
+
+**Development Environment:**
+- **IDE:** Jupyter Notebook for experimentation, VS Code for production code
+- **Version Control:** Git and GitHub for collaboration and code management
+- **Compute Resources:** [Local machine / Google Colab / AWS / HPC cluster]
+
+**Reproducibility:**
+- Random seed setting for consistent results
+- Environment specification (requirements.txt or environment.yml)
+- Documentation of all preprocessing steps and model configurations
 
 ---
 
@@ -194,106 +234,182 @@ Deep Learning
 
 ### Expected Outcomes
 
-Based on similar problems in the literature and preliminary analysis, we anticipate the following results:
+Based on our literature review and preliminary analysis, we anticipate the following results:
 
-#### 1. Model Performance Ranking
+#### Performance Expectations
 
-| Model | Expected F1-Score | Training Time | Interpretability |
-|:------|:------------------|:--------------|:-----------------|
-| Logistic Regression | 0.72 - 0.75 | Fast | High |
-| Random Forest | 0.78 - 0.82 | Medium | Medium |
-| XGBoost | 0.80 - 0.85 | Medium | Medium |
-| SVM | 0.75 - 0.79 | Slow | Low |
-| Neural Network | 0.77 - 0.83 | Slow | Low |
+1. **Baseline Performance:** 
+   - Linear models expected to achieve [X]% accuracy/RMSE
+   - Provides lower bound for model comparison
 
-We expect ensemble methods (Random Forest, XGBoost) to outperform simpler models, with performance gaps most pronounced when non-linear relationships exist in the data.
+2. **Ensemble Methods:**
+   - Random Forest: Expected [Y]% accuracy (±Z% confidence interval)
+   - Gradient Boosting: Expected to be top performer with [Y+5]% accuracy
+   - Rationale: Ensemble methods typically excel on structured data
 
-#### 2. Feature Importance Insights
-- We expect [2-3 specific features] to be the most predictive
-- Feature interactions may reveal unexpected patterns
-- Certain features might show multicollinearity requiring careful handling
+3. **Neural Networks:**
+   - Expected performance similar to or slightly better than gradient boosting
+   - Trade-off: Higher computational cost and reduced interpretability
+   - May require more training data to avoid overfitting
 
-#### 3. Trade-offs Analysis
-- **Complexity vs. Performance**: More complex models (neural networks, gradient boosting) may offer marginal improvements at the cost of interpretability
-- **Training Time vs. Accuracy**: Ensemble methods will require longer training but provide better generalization
-- **Interpretability vs. Accuracy**: Logistic regression provides clear coefficients but may underfit; tree-based models offer good balance
+4. **Comparative Analysis:**
+   - We expect ensemble methods to outperform simple baselines by at least [X]%
+   - Statistical significance testing using paired t-tests or McNemar's test
 
-### Potential Challenges and Mitigation
+#### Feature Importance Insights
 
-{: .warning }
-**Challenge 1: Overfitting**
-- **Risk**: Complex models may overfit training data
-- **Mitigation**: Regularization (L1/L2), dropout (neural networks), early stopping, cross-validation
+- Features such as [Feature A, Feature B, Feature C] are likely to be most predictive based on domain knowledge
+- Correlation analysis will reveal multicollinearity issues
+- SHAP values or LIME will provide model-agnostic explanations
+- Dimensionality reduction expected to retain [X]% variance with [Y] components
 
-{: .warning }
-**Challenge 2: Computational Constraints**
-- **Risk**: Large-scale hyperparameter tuning may be time-intensive
-- **Mitigation**: Use RandomizedSearchCV instead of GridSearchCV, leverage cloud computing resources
+#### Model Behavior
 
-{: .warning }
-**Challenge 3: Data Quality Issues**
-- **Risk**: Poor data quality could limit model performance
-- **Mitigation**: Extensive exploratory data analysis (EDA), robust preprocessing pipeline
+- **Linear Models:** Expected to perform well if data is linearly separable
+- **Tree-Based Models:** Will capture non-linear relationships and feature interactions
+- **SVMs:** May struggle with large datasets but excel on smaller, well-separated data
+- **Neural Networks:** Will require careful tuning to prevent overfitting
 
-### Comparative Analysis Plan
+### Anticipated Challenges and Solutions
 
-We will create comprehensive visualizations including:
-- ROC curves comparing all models on the test set
-- Precision-Recall curves (especially important for imbalanced datasets)
-- Confusion matrices for error analysis
-- Learning curves to diagnose bias/variance issues
-- Feature importance comparison across models
-- Computational efficiency comparison (training time vs. performance)
+#### Challenge 1: Overfitting
+**Problem:** Complex models may memorize training data rather than learning generalizable patterns.
+
+**Solutions:**
+- Implement cross-validation throughout model development
+- Use regularization techniques (L1, L2, dropout)
+- Monitor validation loss and implement early stopping
+- Increase training data through data augmentation if applicable
+
+#### Challenge 2: Class Imbalance
+**Problem:** If minority class is underrepresented, models may be biased toward majority class.
+
+**Solutions:**
+- Use SMOTE (Synthetic Minority Over-sampling Technique)
+- Implement class weighting in loss functions
+- Use stratified sampling in train-test split
+- Employ evaluation metrics robust to imbalance (F1, ROC-AUC)
+
+#### Challenge 3: Computational Constraints
+**Problem:** Large datasets and complex models may exceed available computational resources.
+
+**Solutions:**
+- Use dimensionality reduction techniques
+- Implement mini-batch processing for neural networks
+- Leverage GPU acceleration where possible
+- Consider model compression techniques for deployment
+
+#### Challenge 4: Interpretability vs. Performance
+**Problem:** Most accurate models (e.g., deep neural networks) are often least interpretable.
+
+**Solutions:**
+- Maintain portfolio of models with varying complexity
+- Use SHAP or LIME for post-hoc interpretability
+- Compare simple interpretable models (e.g., decision trees) with complex ones
+- Document trade-offs for different use cases
 
 ### Success Criteria
 
-{: .highlight }
-The project will be considered successful if:
-1. At least one model achieves F1-score > 0.80 on the test set
-2. We can clearly identify which features are most predictive
-3. We provide actionable insights for [specific domain application]
-4. Our best model outperforms the baseline by at least 10%
-5. We demonstrate thorough understanding of each method's strengths and limitations
+The project will be considered successful if we achieve the following:
 
-### Potential Extensions
+1. **Performance Threshold:**
+   - Achieve at least [X]% accuracy/F1-score on test set (or RMSE < [Y])
+   - Demonstrate statistically significant improvement over baseline
 
-If time permits, we may explore:
-- Advanced ensemble techniques (stacking, blending)
-- Deep learning architectures (attention mechanisms, transformers)
-- Anomaly detection for outlier analysis
-- Transfer learning from related domains
-- Real-time prediction pipeline implementation
+2. **Comparative Analysis:**
+   - Implement at least 4 different algorithms
+   - Provide rigorous comparison with proper statistical testing
+   - Document strengths and weaknesses of each approach
+
+3. **Interpretability:**
+   - Identify top [N] most important features with justification
+   - Provide visualizations of model behavior and decision boundaries
+   - Generate actionable insights from model analysis
+
+4. **Reproducibility:**
+   - Complete, well-documented code with clear instructions
+   - All experiments reproducible with fixed random seeds
+   - Results validated through multiple runs
+
+5. **Practical Applicability:**
+   - Model can make predictions on new data in reasonable time
+   - Performance is consistent across different data subsets
+   - Clear documentation for deployment
+
+### Visualization and Analysis Plan
+
+We will create comprehensive visualizations including:
+
+- **Data Exploration:** Distributions, correlations, missing data patterns
+- **Model Performance:** ROC curves, precision-recall curves, confusion matrices
+- **Feature Analysis:** Feature importance plots, SHAP summary plots
+- **Comparison:** Side-by-side model comparison tables and charts
+- **Error Analysis:** Visualization of misclassified instances
+
+### Timeline and Milestones
+
+- **Week 1-2:** Data collection, cleaning, and exploratory analysis
+- **Week 3-4:** Feature engineering and baseline model implementation
+- **Week 5-6:** Advanced model implementation and tuning (Midterm Report)
+- **Week 7-8:** Model comparison, evaluation, and refinement
+- **Week 9-10:** Final analysis, visualization, and documentation (Final Report)
+
+### Future Work and Extensions
+
+Potential directions for extending this work:
+
+1. **Advanced Architectures:**
+   - Explore deep learning architectures (CNNs for image data, RNNs for sequential data)
+   - Investigate transfer learning from pre-trained models
+   - Experiment with attention mechanisms
+
+2. **Ensemble Techniques:**
+   - Implement stacking and blending of multiple models
+   - Explore AutoML frameworks for automated model selection
+
+3. **Deployment:**
+   - Develop REST API for model serving
+   - Create web interface for interactive predictions
+   - Implement model monitoring and retraining pipeline
+
+4. **Domain Expansion:**
+   - Apply methodology to related datasets or problems
+   - Investigate cross-domain transfer learning
+   - Collect additional data to improve model performance
+
+5. **Theoretical Analysis:**
+   - Analyze model complexity and generalization bounds
+   - Investigate feature interactions more deeply
+   - Study robustness to adversarial examples
 
 ---
 
 ## References
 
-1. Author, A., & Author, B. (Year). Title of relevant paper on similar ML problem. *Journal Name*, Volume(Issue), pages. DOI/URL
+1. [Author 1], [Author 2]. "[Paper Title on Similar Problem]." *Conference/Journal Name*, Year. DOI or URL.
 
-2. Author, C., et al. (Year). Title of paper on ensemble methods or relevant technique. *Conference Name*, pages. DOI/URL
+2. [Author]. "[Relevant Machine Learning Textbook/Paper]." *Publisher/Conference*, Year, pp. pages.
 
-3. Author, D., & Author, E. (Year). Title of paper on feature engineering or domain-specific approach. *Journal Name*, Volume(Issue), pages. DOI/URL
+3. [Dataset Authors]. "[Dataset Name and Description]." Available at: [URL]. Accessed: [Date].
 
-4. Breiman, L. (2001). Random forests. *Machine Learning*, 45(1), 5-32.
+4. Hastie, T., Tibshirani, R., & Friedman, J. "The Elements of Statistical Learning: Data Mining, Inference, and Prediction." *Springer*, 2009.
 
-5. Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD*, 785-794.
+5. Géron, A. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow." *O'Reilly Media*, 2nd Edition, 2019.
 
-6. Chawla, N. V., et al. (2002). SMOTE: Synthetic minority over-sampling technique. *Journal of Artificial Intelligence Research*, 16, 321-357.
+6. Bishop, C. M. "Pattern Recognition and Machine Learning." *Springer*, 2006.
 
-7. Lundberg, S. M., & Lee, S. I. (2017). A unified approach to interpreting model predictions. *Advances in Neural Information Processing Systems*, 30.
+7. Goodfellow, I., Bengio, Y., & Courville, A. "Deep Learning." *MIT Press*, 2016.
 
-8. [Dataset Source] (Year). Dataset Name. Retrieved from [URL]
+8. Breiman, L. "Random Forests." *Machine Learning*, 45(1):5-32, 2001.
 
-9. Scikit-learn Documentation. (2024). Retrieved from https://scikit-learn.org/
+9. Chen, T., & Guestrin, C. "XGBoost: A Scalable Tree Boosting System." *Proceedings of KDD*, 2016.
 
-10. Additional relevant papers based on your specific problem domain
-
----
-
-{: .fs-3 }
-**Next Steps**: [Midterm Report →](midterm.md)
-{: .text-right }
+10. [Add domain-specific references relevant to your problem]
 
 ---
 
-*Last Updated: [Date]*
+**Note:** Replace all placeholders (marked with brackets) with your actual project details, datasets, and specific methods relevant to your chosen problem domain.
+
+---
+
+*Proposal submitted: [Date]*
