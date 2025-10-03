@@ -1,43 +1,28 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
-# CS-7641 Machine Learning Project
+# Machine Learning Course Project
 
-**Fall 2024 | Georgia Institute of Technology**
+Welcome to our ML course project website. This site documents our research journey through three key phases:
 
----
-
-## Team Information
-
-**Team Number:** 45 
-
-**Team Members:**
-- Abhishek Dharmadhikari
-- Amandeep Gupta
-- Harshavardhan Kedarnath
-- Kanhaiya Madaswar
-- Rishit Patel
-
----
+- **Proposal**: Initial project concept and methodology
+- **Midterm Report**: Progress update and preliminary findings
+- **Final Report**: Complete analysis and conclusions
 
 ## Project Overview
 
-This website documents our machine learning project for CS-7641. Navigate through the pages to view our proposal, midterm report, and final report.
+This project explores [Your ML Topic Here] with applications in [Your Domain]. Navigate through the tabs above to view detailed documentation of each project phase.
 
-### Quick Links
+## Team Members
 
-- [Project Proposal](proposal.md)
-- [Midterm Report](midterm.md)
-- [Final Report](final.md)
+- Student Name 1
+- Student Name 2
+- Student Name 3
 
----
+## Course Information
 
-## Repository
-
-Source code and data: [GitHub Repository](https://github.com/yourusername/your-repo)
-
----
-
-*Last updated: {{ site.time | date: '%B %d, %Y' }}*
+**Course**: [Course Code and Name]  
+**Instructor**: [Instructor Name]  
+**Semester**: [Semester/Year]
