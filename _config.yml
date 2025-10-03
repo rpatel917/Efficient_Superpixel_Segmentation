@@ -1,57 +1,37 @@
-# Site settings
+# Jekyll Configuration for CS-7641 Project
+
 title: CS-7641 Machine Learning Project
-description: Project documentation for CS-7641 Machine Learning course
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+description: Academic project site for CS-7641 - Fall 2024
+baseurl: "" 
+url: "" 
+
+# Theme
+theme: minima
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-# Theme - Just the Docs (best for academic/technical documentation)
-remote_theme: just-the-docs/just-the-docs@v0.8.2
-color_scheme: light
-
-# Enable search functionality
-search_enabled: true
-search:
-  heading_level: 2
-  previews: 3
-  preview_words_before: 5
-  preview_words_after: 10
-  tokenizer_separator: /[\s/]+/
-
-# Enable copy button on code blocks
-enable_copy_code_button: true
-
-# Navigation structure
-nav_order: 1
-
-# Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
-
-# Footer content
-footer_content: "CS-7641 Machine Learning - Georgia Institute of Technology"
+# Navigation
+header_pages:
+  - proposal.md
+  - midterm.md
+  - final.md
 
 # Plugins
 plugins:
-  - jekyll-remote-theme
+  - jekyll-feed
   - jekyll-seo-tag
 
-# Aux links for the upper right navigation
-aux_links:
-  "View on GitHub":
-    - "https://github.com/yourusername/yourrepo"
-
-# Makes Aux links open in a new tab
-aux_links_new_tab: true
+# Minima theme settings
+minima:
+  skin: classic
 
 # Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor
