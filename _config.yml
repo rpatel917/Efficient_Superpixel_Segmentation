@@ -1,6 +1,6 @@
 title: CS-7641 Project
 description: A comprehensive ML project documentation
-baseurl: "/Efficient_Superpixel_Segmentation/" # the subpath of your site, e.g. /your-repo-name
+baseurl: "" # the subpath of your site, e.g. /your-repo-name
 url: "" # the base hostname & protocol for your site
 
 # Build settings
