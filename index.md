@@ -12,7 +12,6 @@ title: Home
   </div>
 
   <div class="abstract">
-    <h2>Abstract</h2>
     <p>
       Please navigate through the tabs above to view our project proposal, midterm progress, and final report.
     </p>
