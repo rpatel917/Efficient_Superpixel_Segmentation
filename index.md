@@ -5,20 +5,20 @@ title: Home
 
 # CS-7641 Machine Learning Project
 
-**Fall 2024 | Georgia Institute of Technology**
+**Fall 2025 | Georgia Institute of Technology**
 
 ---
 
 ## Team Information
 
-**Team Name:** [Your Team Name]
+**Team Number:** 45 
 
 **Team Members:**
-- [Member 1]
-- [Member 2]
-- [Member 3]
-- [Member 4]
-- [Member 5]
+- Abhishek Dharmadhikari
+- Amandeep Gupta
+- Harshavardhan Kedarnath
+- Kanhaiya Madaswar
+- Rishit Patel
 
 ---
 
