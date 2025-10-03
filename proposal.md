@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Proposal
+title: Project Proposal
 permalink: /proposal/
 ---
 
