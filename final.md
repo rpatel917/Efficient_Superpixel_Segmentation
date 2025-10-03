@@ -6,8 +6,4 @@ permalink: /final/
 
 # Final Report
 
----
-
-*This section will be completed for the final submission.*
-
----
+Content to be added...
