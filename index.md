@@ -1,54 +1,43 @@
 ---
 layout: default
 title: Home
-nav_order: 1
-description: "CS-7641 Machine Learning Project Documentation"
-permalink: /
 ---
 
 # CS-7641 Machine Learning Project
-{: .fs-9 }
 
-Welcome to our CS-7641 Machine Learning project documentation.
-{: .fs-6 .fw-300 }
-
-[View Proposal](proposal.md){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/yourusername/yourrepo){: .btn .fs-5 .mb-4 .mb-md-0 }
+**Fall 2024 | Georgia Institute of Technology**
 
 ---
 
-## Team Members
+## Team Information
 
-- Team Member 1
-- Team Member 2
-- Team Member 3
-- Team Member 4
+**Team Name:** [Your Team Name]
+
+**Team Members:**
+- [Member 1]
+- [Member 2]
+- [Member 3]
+- [Member 4]
+- [Member 5]
+
+---
 
 ## Project Overview
 
-This project explores [brief description of your ML problem/topic].
+This website documents our machine learning project for CS-7641. Navigate through the pages to view our proposal, midterm report, and final report.
 
-## Quick Navigation
+### Quick Links
 
-| Document | Description | Status |
-|:---------|:------------|:-------|
-| [Proposal](proposal.md) | Initial project proposal with problem definition and proposed methods | ✅ Complete |
-| [Midterm Report](midterm.md) | Progress update and preliminary results | 🚧 In Progress |
-| [Final Report](final.md) | Complete project findings and conclusions | 📅 Upcoming |
+- [Project Proposal](proposal.md)
+- [Midterm Report](midterm.md)
+- [Final Report](final.md)
 
 ---
 
-## About This Project
+## Repository
 
-This website serves as the central documentation hub for our CS-7641 Machine Learning course project at Georgia Institute of Technology. Here you'll find our complete project proposal, progress updates, results, and final analysis.
-
-### Project Timeline
-
-- **Proposal Submission**: [Date]
-- **Midterm Report**: [Date]
-- **Final Presentation**: [Date]
-- **Final Report**: [Date]
+Source code and data: [GitHub Repository](https://github.com/yourusername/your-repo)
 
 ---
 
-*CS-7641: Machine Learning - Georgia Institute of Technology*
+*Last updated: {{ site.time | date: '%B %d, %Y' }}*
