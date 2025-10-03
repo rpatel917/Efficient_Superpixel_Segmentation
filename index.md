@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="home-container">
-  <h1 class="project-title">S³-Net: Superpixel-Scaled Segmentation Network for Real-Time Scene Understanding</h1>
+  <h1 class="project-title">Towards Real-Time Semantic Segmentation Using Superpixel Clustering</h1>
   
   <div class="project-info">
     <p><strong>Team Number:</strong> 45</p>
