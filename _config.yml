@@ -1,13 +1,21 @@
-title: "CS-7641 Machine Learning Project"
-description: "Course Project Website"
-theme: minima
-author: "Your Name"
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
+title: "ML CS-7641 — Project"
+description: "Class project website for CS-7641"
+baseurl: "" # change if served from a subpath
+url: "" # set your GitHub Pages URL if you deploy
+markdown: kramdown
+destination: _site
 
-# Navigation
-header_pages:
-  - proposal.md
-  - midterm.md
-  - endsem.md
+
+# Plugins (keep minimal to run on GitHub Pages)
+plugins:
+- jekyll-feed
+
+
+# Author / theme settings
+author: "Your Name"
+
+
+# Exclude files from build
+exclude:
+- Gemfile
+- Gemfile.lock
