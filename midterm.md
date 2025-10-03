@@ -1,9 +1,13 @@
 ---
-layout: page
+layout: default
 title: Midterm Report
 permalink: /midterm/
 ---
 
 # Midterm Report
 
-Content to be added...
+*Coming Soon*
+
+---
+
+*Last Updated: [Date]*
