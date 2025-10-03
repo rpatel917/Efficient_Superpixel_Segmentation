@@ -1,7 +1,6 @@
-# Jekyll Configuration for CS-7641 Project
-
-title: CS-7641 Machine Learning Project
-description: Academic project site for CS-7641
+# Site settings
+title: "ML Course Project"
+description: "Machine Learning Course Project - Academic Portfolio"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
@@ -9,23 +8,13 @@ url: "" # the base hostname & protocol for your site
 markdown: kramdown
 theme: minima
 
-# Collections
-collections:
-  pages:
-    output: true
-    permalink: /:name/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-
-# Exclude from processing
+# Exclude custom layouts from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
+
+# Sass settings
+sass:
+  style: compressed
