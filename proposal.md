@@ -4,19 +4,42 @@ title: Proposal
 permalink: /proposal/
 ---
 
-# Proposal
+# Project Proposal
+
+---
 
 ## Introduction
-*Placeholder for introduction text.*
+
+
+
+---
 
 ## Problem Definition
-*Placeholder for problem definition text.*
+
+
+
+---
 
 ## Proposed Methods
-*Placeholder for proposed methods text.*
+
+
+
+---
 
 ## Potential Results and Discussion
-*Placeholder for results and discussion text.*
+
+
+
+---
 
 ## References
-*Placeholder for references.*
+
+1. 
+
+---
+
+**Note:** Replace all placeholders (marked with brackets) with your actual project details, datasets, and specific methods relevant to your chosen problem domain.
+
+---
+
+*Proposal submitted: [Date]*
