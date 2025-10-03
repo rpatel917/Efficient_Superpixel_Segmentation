@@ -10,4 +10,6 @@ permalink: /final/
 
 *This section will be completed for the final submission.*
 
+---
 
+*Report due: [Date]*
