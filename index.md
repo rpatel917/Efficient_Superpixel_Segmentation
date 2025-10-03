@@ -8,7 +8,14 @@ title: Home
   
   <div class="project-info">
     <p><strong>Team Number:</strong> 45</p>
-    <p><strong>Team Members:</strong> Abhishek Dharmadhikari, Amandeep Gupta, Harshavardhan Kedarnath, Kanhaiya Madaswar, Rishit Patel </p>
+    <p><strong>Team Members:</strong></p>
+    <ul>
+      <li>Abhishek Dharmadhikari</li>
+      <li>Amandeep Gupta</li>
+      <li>Harshavardhan Kedarnath</li>
+      <li>Kanhaiya Madaswar</li>
+      <li>Rishit Patel</li>
+    </ul>
   </div>
 
   <div class="abstract">
