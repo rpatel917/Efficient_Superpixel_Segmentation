@@ -1,27 +1,33 @@
 ---
-layout: page
+layout: default
 title: Proposal
 permalink: /proposal/
 ---
 
 # Project Proposal
 
-## Introduction
+## 1. Introduction
 
-
-## Problem Definition
-
-
-## Methods
-
-
-## Results and Discussion
-
-
-## References
-
-1. 
 
 ---
 
-**Last Updated**: [Date]
+## 2. Problem Definition
+
+---
+
+## 3. Methods
+
+
+---
+
+## 4. Results and Discussion
+
+
+---
+
+## 5. References
+
+
+---
+
+*Last Updated: [Date]*
