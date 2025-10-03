@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Midterm Report
+title: Midterm Checkpoint
 permalink: /midterm/
 ---
 
-# Midterm Report
+# Midterm Checkpoint
 
 *Coming Soon*
