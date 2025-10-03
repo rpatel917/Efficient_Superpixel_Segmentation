@@ -1,28 +1,42 @@
 ---
-layout: home
+layout: default
 title: Home
 ---
 
-# Machine Learning Course Project
+<div class="home-container">
+  <h1 class="project-title">Machine Learning Course Project</h1>
+  
+  <div class="project-info">
+    <p><strong>Course:</strong> CS/ML XXX - Machine Learning</p>
+    <p><strong>Semester:</strong> Fall 2024</p>
+    <p><strong>Team Members:</strong> [Your Name(s)]</p>
+    <p><strong>Instructor:</strong> [Instructor Name]</p>
+  </div>
 
-Welcome to our ML course project website. This site documents our research journey through three key phases:
+  <div class="abstract">
+    <h2>Abstract</h2>
+    <p>
+      This project explores [brief description of your ML project topic]. 
+      Navigate through the tabs above to view our project proposal, midterm progress, 
+      and final report.
+    </p>
+  </div>
 
-- **Proposal**: Initial project concept and methodology
-- **Midterm Report**: Progress update and preliminary findings
-- **Final Report**: Complete analysis and conclusions
-
-## Project Overview
-
-This project explores [Your ML Topic Here] with applications in [Your Domain]. Navigate through the tabs above to view detailed documentation of each project phase.
-
-## Team Members
-
-- Student Name 1
-- Student Name 2
-- Student Name 3
-
-## Course Information
-
-**Course**: [Course Code and Name]  
-**Instructor**: [Instructor Name]  
-**Semester**: [Semester/Year]
+  <div class="quick-links">
+    <h2>Quick Navigation</h2>
+    <div class="link-grid">
+      <a href="{{ site.baseurl }}/proposal" class="nav-card">
+        <h3>📄 Proposal</h3>
+        <p>Project overview, problem definition, and proposed methods</p>
+      </a>
+      <a href="{{ site.baseurl }}/midterm" class="nav-card">
+        <h3>📊 Midterm Report</h3>
+        <p>Progress update and preliminary results</p>
+      </a>
+      <a href="{{ site.baseurl }}/final" class="nav-card">
+        <h3>📑 Final Report</h3>
+        <p>Complete analysis, results, and conclusions</p>
+      </a>
+    </div>
+  </div>
+</div>
