@@ -1,0 +1,27 @@
+/* Academic color palette: navy, slate, soft greys */
+:root{
+--navy: #0b3d91;
+--accent: #2b6cb0;
+--slate: #4a5568;
+--muted: #f6f8fa;
+--card-bg: #ffffff;
+--text: #0f1724;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--text); background:var(--muted);}
+.container{max-width:900px; margin:0 auto; padding:2rem}
+.site-header{background:linear-gradient(90deg,var(--navy),var(--accent)); color:white; padding:1rem 0}
+.site-title{margin:0; font-size:1.25rem; font-weight:600}
+.site-title a{color:white; text-decoration:none}
+.tabs{margin-top:0.6rem}
+.tabs .tab{display:inline-block; padding:0.5rem 1rem; margin-right:0.25rem; background:rgba(255,255,255,0.08); color:white; text-decoration:none; border-radius:6px}
+.tabs .tab[aria-current="page"]{background:white; color:var(--navy); font-weight:600}
+main{margin-top:1.5rem}
+.card{background:var(--card-bg); padding:1.25rem; border-radius:8px; box-shadow:0 6px 18px rgba(11,61,145,0.06);}
+h2{color:var(--navy); margin-top:0}
+.section-meta{color:var(--slate); font-size:0.95rem}
+.site-footer{padding:1rem 0; text-align:center; color:var(--slate)}
+
+
+/* Responsive */
+@media (max-width:640px){ .container{padding:1rem} .tabs .tab{padding:0.4rem 0.6rem} }
