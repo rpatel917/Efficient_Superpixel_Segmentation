@@ -1,21 +1,37 @@
-title: "ML CS-7641 — Project"
-description: "Class project website for CS-7641"
-baseurl: "" # change if served from a subpath
-url: "" # set your GitHub Pages URL if you deploy
+# Jekyll Configuration for CS-7641 Project
+
+title: CS-7641 Machine Learning Project
+description: Academic project site for CS-7641 - Fall 2024
+baseurl: "" 
+url: "" 
+
+# Theme
+theme: minima
+
+# Build settings
 markdown: kramdown
-destination: _site
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
+# Navigation
+header_pages:
+  - proposal.md
+  - midterm.md
+  - final.md
 
-# Plugins (keep minimal to run on GitHub Pages)
+# Plugins
 plugins:
-- jekyll-feed
+  - jekyll-feed
+  - jekyll-seo-tag
 
+# Minima theme settings
+minima:
+  skin: classic
 
-# Author / theme settings
-author: "Your Name"
-
-
-# Exclude files from build
+# Exclude from processing
 exclude:
-- Gemfile
-- Gemfile.lock
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
