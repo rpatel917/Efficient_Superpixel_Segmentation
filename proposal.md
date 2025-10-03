@@ -27,5 +27,3 @@ permalink: /proposal/
 
 ## 5. References
 
-
----
