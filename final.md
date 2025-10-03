@@ -1,9 +1,13 @@
 ---
-layout: page
+layout: default
 title: Final Report
 permalink: /final/
 ---
 
 # Final Report
 
-Content to be added...
+*Coming Soon*
+
+---
+
+*Last Updated: [Date]*
