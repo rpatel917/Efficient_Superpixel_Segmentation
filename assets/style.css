@@ -1,27 +1,278 @@
-/* Academic color palette: navy, slate, soft greys */
-:root{
---navy: #0b3d91;
---accent: #2b6cb0;
---slate: #4a5568;
---muted: #f6f8fa;
---card-bg: #ffffff;
---text: #0f1724;
+---
+---
+
+@import "minima";
+
+/* Academic Color Scheme for CS-7641 Project */
+
+/* Primary Colors - Academic Blues */
+$primary-blue: #1e3a8a;
+$secondary-blue: #3b82f6;
+$light-blue: #eff6ff;
+$accent-blue: #60a5fa;
+
+/* Text Colors */
+$text-dark: #1f2937;
+$text-medium: #4b5563;
+$text-light: #6b7280;
+
+/* Background Colors */
+$bg-light: #f9fafb;
+$bg-white: #ffffff;
+
+/* Override Minima Theme Colors */
+.site-header {
+  background: linear-gradient(135deg, $primary-blue 0%, $secondary-blue 100%);
+  border-top: none;
+  border-bottom: 3px solid $accent-blue;
+  min-height: 80px;
 }
-*{box-sizing:border-box}
-body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--text); background:var(--muted);}
-.container{max-width:900px; margin:0 auto; padding:2rem}
-.site-header{background:linear-gradient(90deg,var(--navy),var(--accent)); color:white; padding:1rem 0}
-.site-title{margin:0; font-size:1.25rem; font-weight:600}
-.site-title a{color:white; text-decoration:none}
-.tabs{margin-top:0.6rem}
-.tabs .tab{display:inline-block; padding:0.5rem 1rem; margin-right:0.25rem; background:rgba(255,255,255,0.08); color:white; text-decoration:none; border-radius:6px}
-.tabs .tab[aria-current="page"]{background:white; color:var(--navy); font-weight:600}
-main{margin-top:1.5rem}
-.card{background:var(--card-bg); padding:1.25rem; border-radius:8px; box-shadow:0 6px 18px rgba(11,61,145,0.06);}
-h2{color:var(--navy); margin-top:0}
-.section-meta{color:var(--slate); font-size:0.95rem}
-.site-footer{padding:1rem 0; text-align:center; color:var(--slate)}
 
+.site-title {
+  font-size: 32px !important;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: $bg-white !important;
+  
+  &:hover {
+    color: $light-blue !important;
+    text-decoration: none;
+  }
+}
 
-/* Responsive */
-@media (max-width:640px){ .container{padding:1rem} .tabs .tab{padding:0.4rem 0.6rem} }
+.site-nav {
+  line-height: 80px;
+  
+  .page-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $bg-white;
+    }
+  }
+}
+
+/* Main Content Styling */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: $text-dark;
+  background-color: $bg-light;
+  line-height: 1.8;
+}
+
+.page-content {
+  background-color: $bg-light;
+  padding: 40px 0;
+}
+
+.wrapper {
+  max-width: 900px;
+  background-color: $bg-white;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-blue;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5em;
+  border-bottom: 3px solid $secondary-blue;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2em;
+  color: $primary-blue;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.4rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: $secondary-blue;
+  margin-top: 2rem;
+}
+
+h4 {
+  font-size: 1.25em;
+  color: $text-dark;
+}
+
+/* Paragraphs and Text */
+p {
+  margin-bottom: 1.2em;
+  text-align: justify;
+  color: $text-dark;
+}
+
+strong {
+  color: $primary-blue;
+  font-weight: 600;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  
+  li {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+    color: $text-medium;
+  }
+}
+
+/* Links */
+a {
+  color: $secondary-blue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $accent-blue;
+    text-decoration: underline;
+  }
+}
+
+/* Code Blocks */
+code {
+  background-color: $light-blue;
+  color: $primary-blue;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: $bg-light;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid $secondary-blue;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid $secondary-blue;
+  background-color: $light-blue;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: $text-medium;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  
+  th {
+    background-color: $primary-blue;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  td {
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: $bg-light;
+  }
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+/* Footer */
+.site-footer {
+  background-color: $primary-blue;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: none;
+  
+  a {
+    color: $accent-blue;
+    
+    &:hover {
+      color: $light-blue;
+    }
+  }
+  
+  .footer-heading {
+    color: $bg-white;
+  }
+}
+
+/* Special Sections */
+.team-info {
+  background-color: $light-blue;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid $secondary-blue;
+  margin-bottom: 2rem;
+  
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.placeholder {
+  background-color: $bg-light;
+  padding: 3rem;
+  text-align: center;
+  color: $text-light;
+  font-style: italic;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+  }
+  
+  .site-title {
+    font-size: 24px !important;
+  }
+}
