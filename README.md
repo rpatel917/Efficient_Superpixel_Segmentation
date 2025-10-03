@@ -1,66 +1,218 @@
 # CS-7641 Machine Learning Project
 
-This repository contains the project documentation for our CS-7641 Machine Learning course project at Georgia Institute of Technology.
+This repository contains the project website for our CS-7641 Machine Learning course project at Georgia Institute of Technology.
 
-## Project Website
-
-Visit our project website: [https://yourusername.github.io/yourrepo](https://yourusername.github.io/yourrepo)
-
-## Repository Structure
+## Project Structure
 
 ```
 .
-├── _config.yml          # Jekyll configuration
-├── Gemfile             # Ruby dependencies
-├── index.md            # Home page
-├── proposal.md         # Project proposal
-├── midterm.md          # Midterm report
-├── final.md            # Final report
-└── README.md           # This file
+├── _config.yml              # Jekyll configuration
+├── Gemfile                  # Ruby dependencies
+├── README.md               # This file
+├── index.md                # Home page
+├── proposal.md             # Project proposal
+├── midterm.md              # Midterm report
+└── final.md                # Final report
 ```
 
-## Local Development
+## Setup Instructions
 
-To run this site locally:
+### Local Development
 
-1. Install Ruby and Bundler
-2. Install dependencies:
+1. **Install Ruby and Bundler**
+   ```bash
+   # On macOS
+   brew install ruby
+   
+   # On Ubuntu/Debian
+   sudo apt-get install ruby-full
+   
+   # Install Bundler
+   gem install bundler
+   ```
+
+2. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
+   ```
+
+3. **Install dependencies**
    ```bash
    bundle install
    ```
-3. Run the local server:
+
+4. **Run Jekyll locally**
    ```bash
    bundle exec jekyll serve
    ```
-4. Visit `http://localhost:4000` in your browser
 
-## GitHub Pages Deployment
+5. **View the site**
+   - Open your browser to `http://localhost:4000`
 
-This site is automatically deployed via GitHub Pages when you push to the main branch.
+### GitHub Pages Deployment
 
-### Setup Instructions:
+1. **Create a new GitHub repository**
 
-1. Create a new repository on GitHub
-2. Push all these files to your repository
-3. Go to repository Settings → Pages
-4. Under "Source", select "Deploy from a branch"
-5. Select the `main` branch and `/ (root)` folder
-6. Click Save
-7. Your site will be published at `https://yourusername.github.io/yourrepo`
+2. **Push your code to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/your-repo.git
+   git push -u origin main
+   ```
 
-## Team Members
+3. **Enable GitHub Pages**
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Set source to "Deploy from a branch"
+   - Select "main" branch and "/ (root)" folder
+   - Click "Save"
 
-- Team Member 1
-- Team Member 2
-- Team Member 3
-- Team Member 4
+4. **Access your site**
+   - Your site will be available at: `https://yourusername.github.io/your-repo/`
+   - It may take a few minutes for the first deployment
 
-## Course Information
+## Customization
 
-**Course**: CS-7641 Machine Learning  
-**Institution**: Georgia Institute of Technology  
-**Semester**: [Your Semester]
+### Update Team Information
+
+Edit `index.md` to add your team name and members:
+
+```markdown
+**Team Name:** [Your Team Name]
+
+**Team Members:**
+- [Member 1]
+- [Member 2]
+- [Member 3]
+```
+
+### Fill in the Proposal
+
+Edit `proposal.md` and replace all placeholder text (marked with brackets `[]`) with your actual project details:
+
+- Project domain and problem
+- Dataset information
+- Specific methods and algorithms
+- Expected results
+- Relevant references
+
+### Add Content to Other Pages
+
+- **Midterm Report** (`midterm.md`): Add your progress update, preliminary results, and challenges
+- **Final Report** (`final.md`): Add complete results, analysis, and conclusions
+
+### Customize Styling
+
+The site uses Jekyll's default Minima theme with the "classic" skin, which provides a clean academic look out of the box. No custom CSS needed!
+
+## Page Structure
+
+### Proposal Sections
+- Introduction
+- Problem Definition
+- Proposed Methods
+- Potential Results and Discussion
+- References
+
+### Midterm Report Sections (suggested)
+- Progress Summary
+- Data Exploration and Preprocessing
+- Preliminary Model Results
+- Challenges Encountered
+- Next Steps
+
+### Final Report Sections (suggested)
+- Executive Summary
+- Complete Methodology
+- Results and Analysis
+- Model Comparison
+- Conclusions
+- Future Work
+- Complete References
+
+## Tips for Academic Writing
+
+1. **Be specific**: Replace all `[placeholder]` text with concrete details
+2. **Cite sources**: Add proper citations in the References section
+3. **Include figures**: Add images by placing them in an `assets/images/` folder and referencing them:
+   ```markdown
+   ![Description](assets/images/your-image.png)
+   ```
+4. **Use tables**: Markdown tables are great for comparing results:
+   ```markdown
+   | Model | Accuracy | F1-Score |
+   |-------|----------|----------|
+   | LR    | 85.2%    | 0.83     |
+   | RF    | 89.7%    | 0.88     |
+   ```
+5. **Add code snippets**: Use code blocks for important code:
+   ````markdown
+   ```python
+   from sklearn.ensemble import RandomForestClassifier
+   model = RandomForestClassifier(n_estimators=100)
+   ```
+   `   ```
+
+## Color Scheme
+
+The site uses Jekyll Minima's classic theme with a clean, professional academic appearance.
+
+## Troubleshooting
+
+### Jekyll Build Errors
+
+If you encounter build errors:
+
+```bash
+# Clear the cache
+bundle exec jekyll clean
+
+# Rebuild
+bundle exec jekyll build
+
+# Serve again
+bundle exec jekyll serve
+```
+
+### GitHub Pages Not Updating
+
+- Check the "Actions" tab in your repository for build status
+- Ensure all files are committed and pushed
+- Wait a few minutes for GitHub to rebuild the site
+- Check that your `_config.yml` has correct settings
+
+### Local Server Issues
+
+```bash
+# Update bundler
+gem update bundler
+
+# Reinstall dependencies
+bundle install
+
+# If port 4000 is busy, use a different port
+bundle exec jekyll serve --port 4001
+```
+
+## Resources
+
+- [Jekyll Documentation](https://jekyllrb.com/docs/)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Minima Theme](https://github.com/jekyll/minima)
 
 ## License
 
-This project is for educational purposes as part of CS-7641 coursework.
+This project is for academic purposes as part of CS-7641 at Georgia Tech.
+
+## Contact
+
+[Your Team Email or GitHub Profile]
+
+---
+
+*Last updated: October 2024*
