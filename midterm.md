@@ -9,5 +9,3 @@ permalink: /midterm/
 *Coming Soon*
 
 ---
-
-*Last Updated: [Date]*
