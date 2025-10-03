@@ -11,5 +11,3 @@ permalink: /midterm/
 *This section will be completed for the midterm submission.*
 
 ---
-
-*Report due: [Date]*
