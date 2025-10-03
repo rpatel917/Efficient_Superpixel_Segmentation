@@ -7,5 +7,3 @@ permalink: /midterm/
 # Midterm Report
 
 *Coming Soon*
-
----
