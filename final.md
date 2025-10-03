@@ -7,7 +7,3 @@ permalink: /final/
 # Final Report
 
 *Coming Soon*
-
----
-
-*Last Updated: [Date]*
