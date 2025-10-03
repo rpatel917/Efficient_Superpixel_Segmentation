@@ -5,7 +5,7 @@ title: Home
 
 # CS-7641 Machine Learning Project
 
-**Fall 2025 | Georgia Institute of Technology**
+**Fall 2024 | Georgia Institute of Technology**
 
 ---
 
