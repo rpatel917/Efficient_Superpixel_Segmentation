@@ -18,9 +18,12 @@ title: Home
     </ul>
   </div>
 
-  <div class="abstract">
-    <p>
-      Please navigate through the tabs above to view our project proposal, midterm progress, and final report.
-    </p>
-  </div>
+<div class="abstract">
+  <p>
+    Please navigate through the tabs above to view our project proposal, midterm progress, and final report.
+  </p>
+  <p>
+    View our code on <a href="https://github.com/your-repo-link](https://github.com/rpatel917/rpatel917.github.io" target="_blank">GitHub</a>.
+  </p>
+</div>
 </div>
