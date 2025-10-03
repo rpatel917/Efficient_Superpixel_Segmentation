@@ -3,276 +3,322 @@
 
 @import "minima";
 
-/* Academic Color Scheme for CS-7641 Project */
+/* Custom Academic Theme Styles */
 
-/* Primary Colors - Academic Blues */
-$primary-blue: #1e3a8a;
-$secondary-blue: #3b82f6;
-$light-blue: #eff6ff;
-$accent-blue: #60a5fa;
-
-/* Text Colors */
-$text-dark: #1f2937;
-$text-medium: #4b5563;
-$text-light: #6b7280;
-
-/* Background Colors */
-$bg-light: #f9fafb;
-$bg-white: #ffffff;
-
-/* Override Minima Theme Colors */
-.site-header {
-  background: linear-gradient(135deg, $primary-blue 0%, $secondary-blue 100%);
-  border-top: none;
-  border-bottom: 3px solid $accent-blue;
-  min-height: 80px;
-}
-
-.site-title {
-  font-size: 32px !important;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  color: $bg-white !important;
-  
-  &:hover {
-    color: $light-blue !important;
-    text-decoration: none;
-  }
-}
-
-.site-nav {
-  line-height: 80px;
-  
-  .page-link {
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: $bg-white;
-    }
-  }
-}
-
-/* Main Content Styling */
-body {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  color: $text-dark;
-  background-color: $bg-light;
-  line-height: 1.8;
-}
-
-.page-content {
-  background-color: $bg-light;
-  padding: 40px 0;
-}
-
-.wrapper {
-  max-width: 900px;
-  background-color: $bg-white;
-  padding: 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --light-bg: #f8f9fa;
+  --border-color: #dee2e6;
 }
 
 /* Typography */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  color: $primary-blue;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   font-weight: 600;
+  color: var(--primary-color);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 2.5em;
-  border-bottom: 3px solid $secondary-blue;
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--secondary-color);
   padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 2em;
-  color: $primary-blue;
-  border-bottom: 2px solid #e5e7eb;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.4rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 
 h3 {
-  font-size: 1.5em;
-  color: $secondary-blue;
-  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 
-h4 {
-  font-size: 1.25em;
-  color: $text-dark;
+/* Header and Navigation */
+.site-header {
+  border-top: 5px solid var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Paragraphs and Text */
-p {
-  margin-bottom: 1.2em;
-  text-align: justify;
-  color: $text-dark;
+.site-title {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: var(--primary-color) !important;
+  letter-spacing: -0.5px;
 }
 
-strong {
-  color: $primary-blue;
+.site-nav .page-link {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.site-nav .page-link:hover {
+  background-color: var(--light-bg);
+  color: var(--secondary-color);
+}
+
+/* Main Content */
+.page-content {
+  padding: 3rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 900px;
+}
+
+/* Home Page Styles */
+.home {
+  padding: 2rem 0;
+}
+
+.home h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.home > p:first-of-type {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Project Overview Section */
+.home h2 {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+
+.home ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.home ul li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.home ul li:last-child {
+  border-bottom: none;
+}
+
+.home ul li strong {
+  color: var(--secondary-color);
   font-weight: 600;
 }
 
-/* Lists */
-ul, ol {
+/* Team Members and Course Info */
+.home ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.home ul li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Proposal Page Styles */
+.page-content ul {
   margin-left: 2rem;
   margin-bottom: 1.5rem;
-  
-  li {
-    margin-bottom: 0.8rem;
-    line-height: 1.8;
-    color: $text-medium;
-  }
 }
 
-/* Links */
-a {
-  color: $secondary-blue;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  
-  &:hover {
-    color: $accent-blue;
-    text-decoration: underline;
-  }
+.page-content ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
-/* Code Blocks */
+.page-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Code and Pre blocks */
 code {
-  background-color: $light-blue;
-  color: $primary-blue;
-  padding: 2px 6px;
+  background-color: var(--light-bg);
+  padding: 0.2rem 0.4rem;
   border-radius: 3px;
-  font-size: 0.9em;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
 }
 
 pre {
-  background-color: $bg-light;
-  border: 1px solid #e5e7eb;
-  border-left: 4px solid $secondary-blue;
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
   padding: 1rem;
-  border-radius: 4px;
   overflow-x: auto;
-  
-  code {
-    background-color: transparent;
-    padding: 0;
-  }
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid $secondary-blue;
-  background-color: $light-blue;
+  border-left: 4px solid var(--secondary-color);
+  background-color: var(--light-bg);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   font-style: italic;
-  color: $text-medium;
 }
 
 /* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
-  
-  th {
-    background-color: $primary-blue;
-    color: white;
-    padding: 12px;
-    text-align: left;
-    font-weight: 600;
-  }
-  
-  td {
-    border: 1px solid #e5e7eb;
-    padding: 10px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: $bg-light;
-  }
+  margin: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Horizontal Rules */
-hr {
-  border: none;
-  border-top: 2px solid #e5e7eb;
-  margin: 2rem 0;
+table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+table tr:hover {
+  background-color: var(--light-bg);
+}
+
+/* References Section */
+.page-content ol {
+  counter-reset: reference-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-content ol li {
+  counter-increment: reference-counter;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.page-content ol li:before {
+  content: "[" counter(reference-counter) "]";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 /* Footer */
 .site-footer {
-  background-color: $primary-blue;
-  color: rgba(255, 255, 255, 0.8);
-  border-top: none;
-  
-  a {
-    color: $accent-blue;
-    
-    &:hover {
-      color: $light-blue;
-    }
-  }
-  
-  .footer-heading {
-    color: $bg-white;
-  }
+  background-color: var(--light-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-top: 4rem;
 }
 
-/* Special Sections */
-.team-info {
-  background-color: $light-blue;
-  padding: 1.5rem;
-  border-radius: 6px;
-  border-left: 4px solid $secondary-blue;
-  margin-bottom: 2rem;
-  
-  h3 {
-    margin-top: 0;
-  }
-}
-
-.placeholder {
-  background-color: $bg-light;
-  padding: 3rem;
-  text-align: center;
-  color: $text-light;
-  font-style: italic;
-  border-radius: 8px;
-  border: 2px dashed #cbd5e1;
+/* Last Updated Badge */
+hr + p strong {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .wrapper {
-    padding: 20px;
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
   
   h1 {
-    font-size: 2em;
+    font-size: 2rem;
   }
   
   h2 {
-    font-size: 1.6em;
+    font-size: 1.6rem;
   }
   
-  h3 {
-    font-size: 1.3em;
+  .page-content {
+    padding: 1.5rem 0;
   }
   
   .site-title {
-    font-size: 24px !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Section Dividers */
+.page-content h2 + p,
+.page-content h2 + ul,
+.page-content h2 + ol {
+  margin-top: 1.5rem;
+}
+
+/* Emphasis Boxes */
+.page-content > p:first-of-type {
+  background-color: #e8f4f8;
+  border-left: 4px solid var(--secondary-color);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+/* Link Styles */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Print Styles */
+@media print {
+  .site-header,
+  .site-footer,
+  .site-nav {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
   }
 }
