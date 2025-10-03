@@ -14,10 +14,7 @@ title: Home
   <div class="abstract">
     <h2>Abstract</h2>
     <p>
-      This project explores [brief description of your ML project topic]. 
-      Navigate through the tabs above to view our project proposal, midterm progress, 
-      and final report.
+      Please navigate through the tabs above to view our project proposal, midterm progress, and final report.
     </p>
-  </div>
   </div>
 </div>
