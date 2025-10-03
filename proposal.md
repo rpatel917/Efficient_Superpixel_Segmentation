@@ -29,5 +29,3 @@ permalink: /proposal/
 
 
 ---
-
-*Last Updated: [Date]*
