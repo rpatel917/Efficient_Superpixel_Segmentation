@@ -6,29 +6,17 @@ permalink: /proposal/
 
 # Project Proposal
 
----
-
 ## Introduction
 
-
-
----
 
 ## Problem Definition
 
 
----
-
-## Proposed Methods
+## Methods
 
 
+## Results and Discussion
 
----
-
-## Potential Results and Discussion
-
-
----
 
 ## References
 
@@ -36,4 +24,4 @@ permalink: /proposal/
 
 ---
 
-*Proposal submitted: [Date]*
+**Last Updated**: [Date]
