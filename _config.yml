@@ -1,33 +1,27 @@
 # Jekyll Configuration for CS-7641 Project
 
 title: CS-7641 Machine Learning Project
-description: Academic project site for CS-7641 - Fall 2024
-baseurl: "" 
-url: "" 
-
-# Theme
-theme: minima
+description: Academic project site for CS-7641
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+theme: minima
 
-# Navigation
-header_pages:
-  - proposal.md
-  - midterm.md
-  - final.md
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# Minima theme settings
-minima:
-  skin: classic
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
 
 # Exclude from processing
 exclude:
